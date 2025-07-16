@@ -58,18 +58,19 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text("Your Fortune is:",
-            style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold,),
-            ),
-            Card(child: Text(
-              '${_currentFortune}',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
+            Card(
+              child: Padding(
+                padding: const EdgeInsets.all(9.0),
+                child: Text(
+                  '${_currentFortune}',
+                  style: Theme.of(context).textTheme.headlineMedium,
+                ),
+              ),
             ),
             ElevatedButton(
               onPressed: _randomFortune,
-              child: Text("Get Fortune")
-              ),
+              child: Text("Get Fortune"),
+            ),
           ],
         ),
       ),
